@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Kanban</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="kanban-board">
+    <div class="kanban-column" id="todo">
+      <h2>To Do</h2>
+      <div class="kanban-tasks" id="todo-tasks" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <!-- Tarefas em To Do -->
+      </div>
+      <input type="text" id="new-task-todo" placeholder="Adicionar nova tarefa...">
+      <button onclick="addTask('todo')">Adicionar</button>
+    </div>
+
+    <div class="kanban-column" id="inprogress">
+      <h2>In Progress</h2>
+      <div class="kanban-tasks" id="inprogress-tasks" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <!-- Tarefas em In Progress -->
+      </div>
+      <input type="text" id="new-task-inprogress" placeholder="Adicionar nova tarefa...">
+      <button onclick="addTask('inprogress')">Adicionar</button>
+    </div>
+
+    <div class="kanban-column" id="done">
+      <h2>Done</h2>
+      <div class="kanban-tasks" id="done-tasks" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <!-- Tarefas em Done -->
+      </div>
+      <input type="text" id="new-task-done" placeholder="Adicionar nova tarefa...">
+      <button onclick="addTask('done')">Adicionar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
